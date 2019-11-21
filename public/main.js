@@ -150,9 +150,15 @@ function moveBg(delta) {
 
 // //devicemotion
 let posX = 0;
-window.addEventListener('deviceorientation', event => {
-    posX = event.gamma;
-});
+DeviceOrientationEvent.requestPermission()
+    .then(response => {
+        if (response == 'granted') {
+            window.addEventListener('deviceorientation', event => {
+                posX = event.gamma;
+            });
+        }
+    })
+    .catch(console.error)
 
 // on wheel event
 window.addEventListener('wheel', function (e) {

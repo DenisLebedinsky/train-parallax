@@ -153,15 +153,17 @@ window.onload = function () {
     let posX = 0;
 
     document.getElementById('permission').addEventListener("click", function () {
-        DeviceOrientationEvent.requestPermission()
-            .then(response => {
-                if (response == 'granted') {
-                    window.addEventListener('deviceorientation', event => {
-                        posX = event.gamma;
-                    });
-                }
-            })
-            .catch(console.error)
+        if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+            DeviceOrientationEvent.requestPermission()
+                .then(response => {
+                    if (response == 'granted') {
+                        window.addEventListener('deviceorientation', event => {
+                            posX = event.gamma;
+                        });
+                    }
+                })
+                .catch(console.error)
+        }
     });
 
 

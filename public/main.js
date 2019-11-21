@@ -40,7 +40,7 @@ window.onload = function () {
     let train2max = -190;
     let train3max = -460;
 
-   
+
 
     if (window.innerWidth > 1000) {
         train2.scale.y = 0.8;
@@ -64,18 +64,26 @@ window.onload = function () {
         train3.anchor.set(0.45);
         bg.width = window.innerHeight * 1.543;
 
-        if (window.innerHeight > 1750) {
-            bgL = -2270;
-            train2.scale.y = 1.55;
-            train3.scale.y = 1.47;
-        }
-        
-
         if (window.innerHeight < 1320) {
             bgL = -1020;
             train2.scale.y = 0.96;
             train3.scale.y = 0.9;
         }
+
+        if (window.innerHeight > 1320){
+            bgL = -2000;
+            train2.scale.y = 1.55;
+            train3.scale.y = 1.47;
+        }
+
+        if (window.innerHeight > 1750) {
+            bgL = -2270;
+            train2.scale.y = 1.55;
+            train3.scale.y = 1.47;
+        }
+
+
+       
 
     } else {
         train2.scale.y = 0.51;
@@ -89,9 +97,9 @@ window.onload = function () {
 
         }
     }
-   
+
     document.getElementById("size").textContent = window.innerHeight + " " + window.innerWidth;
-   
+
     bg.position.set(-80, 0)
 
     //add to stage

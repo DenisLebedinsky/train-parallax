@@ -50,6 +50,7 @@ window.onload = function () {
         train3.anchor.set(0.45);
 
         if (window.innerHeight > 1320 && window.innerHeight < 1400) {
+
             bgL = -987;
             train2.scale.y = 0.96;
             train3.scale.y = 0.9;
@@ -69,10 +70,10 @@ window.onload = function () {
             train3.scale.y = 0.9;
         }
 
-        if (window.innerHeight > 1320) {
-            bgL = -1500;
-            train2.scale.y = 0.96;
-            train3.scale.y = 0.9;
+        if (window.innerHeight > 1320){
+            bgL = -1400;
+            train2.scale.y = 1.25;
+            train3.scale.y = 1.2;
         }
 
         if (window.innerHeight > 1750) {
@@ -80,7 +81,6 @@ window.onload = function () {
             train2.scale.y = 1.55;
             train3.scale.y = 1.47;
         }
-
     } else {
         train2.scale.y = 0.51;
         train3.scale.y = 0.47;
@@ -93,7 +93,7 @@ window.onload = function () {
 
         }
     }
-
+    
 
     bg.position.set(-80, 0)
 

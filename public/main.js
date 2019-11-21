@@ -40,6 +40,8 @@ window.onload = function () {
     let train2max = -190;
     let train3max = -460;
 
+   
+
     if (window.innerWidth > 1000) {
         train2.scale.y = 0.8;
         train2.anchor.set(0.45);
@@ -67,12 +69,7 @@ window.onload = function () {
             train2.scale.y = 1.55;
             train3.scale.y = 1.47;
         }
-
-        if (window.innerHeight > 1320 && window.innerHeight < 1750){
-            bgL = -2000;
-            train2.scale.y = 1.55;
-            train3.scale.y = 1.47;
-        }
+        
 
         if (window.innerHeight < 1320) {
             bgL = -1020;
@@ -91,9 +88,10 @@ window.onload = function () {
             train3.scale.y = 0.68;
 
         }
-        //if(window.innerHeight )
     }
-
+   
+    document.getElementById("size").textContent = window.innerHeight;
+   
     bg.position.set(-80, 0)
 
     //add to stage
@@ -186,3 +184,4 @@ window.onload = function () {
     }
 
 }
+

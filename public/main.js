@@ -50,7 +50,6 @@ window.onload = function () {
         train3.anchor.set(0.45);
 
         if (window.innerHeight > 1320 && window.innerHeight < 1400) {
-
             bgL = -987;
             train2.scale.y = 0.96;
             train3.scale.y = 0.9;
@@ -71,9 +70,9 @@ window.onload = function () {
         }
 
         if (window.innerHeight > 1320) {
-            bgL = -1400;
-            train2.scale.y = 1.55;
-            train3.scale.y = 1.47;
+            bgL = -1500;
+            train2.scale.y = 0.96;
+            train3.scale.y = 0.9;
         }
 
         if (window.innerHeight > 1750) {

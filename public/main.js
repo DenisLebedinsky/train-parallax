@@ -73,13 +73,13 @@ if (window.innerWidth < 1000) {
         train3.scale.y = 0.9;
     }
 
-} else {
+}else{
     train2.scale.y = 0.51;
     train3.scale.y = 0.47;
     train2max = 400;
     train3max = 0;
-
-    if (window.innerHeight > 900) {
+    
+    if(window.innerHeight > 900){
         train2.scale.y = 0.71;
         train3.scale.y = 0.68;
 
@@ -150,29 +150,15 @@ function moveBg(delta) {
 
 // //devicemotion
 let posX = 0;
-//for ios
-document.getElementById('Permission').addEventListener("click", function () {
-    DeviceOrientationEvent.requestPermission()
-        .then(response => {
-            if (response == 'granted') {
-                window.addEventListener('deviceorientation', event => {
-                    posX = event.gamma;
-                });
-            }
-        })
-        .catch(console.error)
-});
-
 window.addEventListener('deviceorientation', event => {
     posX = event.gamma;
 });
-
 
 // on wheel event
 window.addEventListener('wheel', function (e) {
     e = e || window.event;
     let delta = e.deltaY || e.detail || e.wheelDelta;
-    posX = delta;
+    posX = delta;    
 });
 
 requestAnimationFrame(changePosition);

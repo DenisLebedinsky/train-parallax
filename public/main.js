@@ -78,6 +78,13 @@ if (window.innerWidth < 1000) {
     train3.scale.y = 0.47;
     train2max = 400;
     train3max = 0;
+    
+    if(window.innerHeight > 900){
+        train2.scale.y = 0.71;
+        train3.scale.y = 0.68;
+
+    }
+    //if(window.innerHeight )
 }
 
 bg.position.set(-80, 0)

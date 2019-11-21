@@ -90,7 +90,7 @@ window.onload = function () {
         }
     }
    
-    document.getElementById("size").textContent = window.innerHeight;
+    document.getElementById("size").textContent = window.innerHeight + " " + window.innerWidth;
    
     bg.position.set(-80, 0)
 

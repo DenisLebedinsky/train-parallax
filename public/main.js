@@ -155,17 +155,12 @@ window.onload = function () {
     document.getElementById('permission').addEventListener("click", function () {
         if (typeof DeviceOrientationEvent.requestPermission === 'function') {
             DeviceOrientationEvent.requestPermission()
-                .then(response => {
-                    if (response == 'granted') {
-                        window.addEventListener('deviceorientation', event => {
-                            posX = event.gamma;
-                        });
-                    }
-                })
-                .catch(console.error)
         }
     });
 
+    window.addEventListener('deviceorientation', event => {
+        posX = event.gamma;
+    });
 
     // on wheel event
     window.addEventListener('wheel', function (e) {

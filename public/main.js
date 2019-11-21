@@ -150,6 +150,7 @@ function moveBg(delta) {
 
 // //devicemotion
 let posX = 0;
+//for ios
 document.getElementById('Permission').addEventListener("click", function () {
     DeviceOrientationEvent.requestPermission()
         .then(response => {
@@ -160,6 +161,10 @@ document.getElementById('Permission').addEventListener("click", function () {
             }
         })
         .catch(console.error)
+});
+
+window.addEventListener('deviceorientation', event => {
+    posX = event.gamma;
 });
 
 

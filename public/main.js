@@ -71,7 +71,7 @@ window.onload = function () {
         }
 
         if (window.innerHeight > 1320){
-            bgL = -2000;
+            bgL = -1300;
             train2.scale.y = 1.55;
             train3.scale.y = 1.47;
         }

@@ -68,6 +68,12 @@ window.onload = function () {
             train3.scale.y = 1.47;
         }
 
+        if (window.innerHeight > 1320 && window.innerHeight < 1750){
+            bgL = -2000;
+            train2.scale.y = 1.55;
+            train3.scale.y = 1.47;
+        }
+
         if (window.innerHeight < 1320) {
             bgL = -1020;
             train2.scale.y = 0.96;

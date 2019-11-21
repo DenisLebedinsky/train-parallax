@@ -150,7 +150,7 @@ function moveBg(delta) {
 
 // //devicemotion
 let posX = 0;
-document.addEventListener("click", function () {
+document.body.addEventListener("click", function () {
     DeviceOrientationEvent.requestPermission()
         .then(response => {
             if (response == 'granted') {
